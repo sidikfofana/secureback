@@ -1,0 +1,25 @@
+# config/packages/rate_limiter.yaml
+framework:
+    rate_limiter:
+        anonymous_api:
+            # use 'sliding_window' if you prefer that policy
+            # policy: 'fixed_window'
+            # limit: 100
+            # interval: '60 minutes'
+            # cache_pool: 'cache.anonymous_rate_limiter'
+            # lock_factory: null
+
+            policy: 'fixed_window'
+            limit: 100
+            interval: '1 minute'
+
+        authenticated_request:
+            policy: 'token_bucket'
+            limit: 100
+            # rate: {interval: '1 minute', amount: 10}        
+            interval: '1 minute'        
+
+        authenticated_api:
+            policy: 'token_bucket' 
+            limit: 5
+            interval: '15 minute'

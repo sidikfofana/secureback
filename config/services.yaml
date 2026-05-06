@@ -1,0 +1,191 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    BASE_URL: '%env(BASE_URL)%'
+    domain_name: "%env(DOMAIN_NAME)%"
+    domain_name_no_auth: "%env(DOMAIN_NAME_NO_AUTH)%"
+    domain_front: "%env(DOMAIN_FRONT)%"
+    gtp.base_uri: "%env(GTP_BASE_URI)%"
+    gtp.program_id: "%env(GTP_PROGRAM_ID)%"
+    gtp.program_id_virtual: "%env(GTP_PROGRAM_ID_VIRTUAL)%"
+    gtp.company: "%env(COMPANY)%"
+    gtp.sub_company: "%env(SUB_COMPANY)%"
+    gtp.sub_company_virtual: "%env(SUB_COMPANY_VIRTUAL)%"
+
+    gtp.basic_auth_username: "%env(BASIC_AUTH_USERNAME)%"
+    gtp.basic_auth_password: "%env(BASIC_AUTH_PASSWORD)%"
+    apaym.base_uri: "%env(APAYM_BASE_URI)%"
+
+    # gtp.nsia.program_id: "%env(NSIA_PROGRAM_ID)%"
+    # gtp.uba.program_id: "%env(UBA_PROGRAM_ID)%"
+    # gtp.ecobank.program_id: "%env(ECOBANK_PROGRAM_ID)%"
+
+    gtp.nsia.program_id: "%env(NSIA_PROGRAM_ID)%"
+    gtp.uba.program_id: "%env(UBA_PROGRAM_ID)%"
+    gtp.uba.virtual.program_id: "%env(UBA_VIRTUAL_PROGRAM_ID)%"
+    gtp.ecobank.program_id: "%env(ECOBANK_PROGRAM_ID)%"
+
+    gtp.nsia.company: "%env(NSIA_COMPANY)%"
+    gtp.uba.company: "%env(UBA_COMPANY)%"
+    gtp.uba.virtual.company: "%env(UBA_VIRTUAL_COMPANY)%"
+    gtp.ecobank.company: "%env(ECOBANK_COMPANY)%"
+
+    gtp.nsia.sub_company: "%env(NSIA_SUBCOMPANY)%"
+    gtp.uba.sub_company: "%env(UBA_SUBCOMPANY)%"
+    gtp.uba.virtual.sub_company: "%env(UBA_VIRTUAL_SUBCOMPANY)%"
+    gtp.ecobank.sub_company: "%env(ECOBANK_SUBCOMPANY)%"
+
+    gtp.distribution_account: "%env(DISTRIBUTION_ACCOUNT)%"
+
+    mtn.base_uri: "%env(MTN_BASE_URI)%"
+    mtn.key: "%env(MTN_KEY)%"
+    mtn.secret: "%env(MTN_SECRET)%"
+
+    mtn.base_uri_dis: "%env(BASE_URI_DIS)%"
+    mtn.mtn_dis_api_key: "%env(MTN_DIS_API_KEY)%"
+    mtn.mtn_dis_api_user: "%env(MTN_DIS_API_USER)%"
+    mtn.mtn_dis_payment_id: "%env(MTN_DIS_PAYMENT_ID)%"
+    mtn.mtn_dis_subscription_key: "%env(MTN_DIS_SUBSCRIPTION_KEY)%"
+
+    wave.base_uri: "%env(WAVE_BASE_URI)%"
+    wave.api_key: "%env(WAVE_API_KEY)%"
+    wave.api_key_payout: "%env(WAVE_API_KEY_PAYOUT)%"
+    wave.aggregated_merchant_id: "%env(AGGREGATED_MERCHANT_ID)%"
+
+    orange.base_uri: "%env(ORANGE_BASE_URI)%"
+    orange.merchant_key: "%env(ORANGE_MERCHANT_KEY)%"
+
+    orange.client_id: "%env(ORANGE_CLIENT_ID)%"
+    orange.client_secret: "%env(ORANGE_CLIENT_SECRET)%"
+
+    orange.return_url: "%env(ORANGE_RETURN_URL)%"
+    orange.cancel_url: "%env(ORANGE_CANCEL_URL)%"
+    orange.notif_url: "%env(ORANGE_NOTIF_URL)%"
+
+    orange.cashin.base_uri: "%env(ORANGE_CASHIN_BASE_URI)%"
+    orange.cashin.username: "%env(ORANGE_CASHIN_USERNAME)%"
+    orange.cashin.password: "%env(ORANGE_CASHIN_PASSWORD)%"
+    orange.cashin.bucketMsisdn: "%env(ORANGE_CASHIN_BUCKETMSISDN)%"
+
+    thunes.base_uri: "%env(THUNES_BASE_URI)%"
+    thunes.api_key: "%env(THUNES_API_KEY)%"
+    thunes.api_secret: "%env(THUNES_API_SECRET)%"
+
+    orakank.base_uri: "%env(ORABANK_BASE_URI)%"
+    orakank.api_key: "%env(ORABANK_API_KEY)%"
+    orakank.reference: "%env(ORABANK_REFERENCE)%"
+
+    airtime.base_uri: "%env(AIRTIME_BASE_URI)%"
+    airtime.username: "%env(AIRTIME_USERNAME)%"
+    airtime.password: "%env(AIRTIME_PASSWORD)%"
+    airtime.callback_url: "%env(AIRTIME_CALLBACK_URL)%"
+
+    base_uri: "%env(BASE_URI)%"
+
+    cinetpay.base_uri: "%env(CINET_PAY_BASE_URI)%"
+    cinetpay_client.base_uri: "%env(CINET_PAY_CLIENT_BASE_URI)%"
+    cinetpay.site_id: "%env(CINET_PAY_SITE_ID)%"
+    cinetpay.secret_key: "%env(CINET_PAY_SECRET_KEY)%"
+    cinetpay.apikey: "%env(CINET_PAY_APIKEY)%"
+    cinetpay.notify_url: "%env(CINET_PAY_NOTIFY_URL)%"
+    cinetpay.return_url: "%env(CINET_PAY_RETURN_URL)%"
+
+    tresor_pay.base_uri: "%env(TRESOR_PAY_BASE_URI)%"
+    tresor_pay.key: "%env(TRESOR_PAY_KEY)%"
+    tresor_pay.secret: "%env(TRESOR_PAY_SECRET)%"
+    tresor_pay.url_callback: "%env(TRESOR_PAY_URL_CALLBACK)%"
+
+    uba.base_uri: "%env(UBA_BASE_URI)%"
+    uba.merchant_id: "%env(UBA_MERCHANT_ID)%"
+    uba.secret_key: "%env(UBA_SECRET_KEY)%"
+    uba.return_url: "%env(UBA_RETURN_URL)%"
+
+    moov.username_cashin: "%env(MOOV_USERNAME_CASHIN)%"
+    moov.password_cashin: "%env(MOOV_PASSWORD_CASHIN)%"
+
+    moov.username_cashout: "%env(MOOV_USERNAME_CASHOUT)%"
+    moov.password_cashout: "%env(MOOV_PASSWORD_CASHOUT)%"
+
+    moov.base_uri: "%env(MOOV_BASE_URI)%"
+
+    yango.base_uri: "%env(YANGO_BASE_URI)%"
+    yango.x_client_id: "%env(YANGO_X_CLIENT_ID)%"
+    yango.x_api_key: "%env(YANGO_X_API_KEY)%"
+    yango.x_park_id: "%env(YANGO_X_PARK_ID)%"
+
+    bda.base_uri: "%env(BDA_BASE_URI)%"
+    bda.x_api_key: "%env(BDA_X_API_KEY)%"
+    bda.prefix: "%env(BDA_PREFIX)%"
+    bda.agence: "%env(BDA_AGENCE)%"
+
+services:
+    acme_api.event.jwt_created_listener:
+        class: App\EventListener\JWTCreatedListener
+        arguments: ["@request_stack"]
+        tags:
+            - {
+                  name: kernel.event_listener,
+                  event: lexik_jwt_authentication.on_jwt_created,
+                  method: onJWTCreated,
+              }
+    # App\EventListener\ExceptionListener:
+    #     tags: [kernel.event_listener]
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            # $projectDir: "%kernel.project_dir%"
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: "../src/"
+        exclude:
+            - "../src/DependencyInjection/"
+            - "../src/Entity/"
+            - "../src/Kernel.php"
+            # - "../src/Services/"
+            - "../src/Services/Helpers.php"
+
+    # please note that last definitions always *replace* previous ones
+    acme_api.event.jwt_expired_listener:
+        class: App\EventListener\JWTExpiredListener
+        tags:
+            - {
+                  name: kernel.event_listener,
+                  event: lexik_jwt_authentication.on_jwt_expired,
+                  method: onJWTExpired,
+              }
+    acme_api.event.jwt_notfound_listener:
+        class: App\EventListener\JWTNotFoundListener
+        tags:
+            - {
+                  name: kernel.event_listener,
+                  event: lexik_jwt_authentication.on_jwt_not_found,
+                  method: onJWTNotFound,
+              }
+
+    acme_api.event.jwt_invalid_listener:
+        class: App\EventListener\JWTInvalidListener
+        tags:
+            - {
+                  name: kernel.event_listener,
+                  event: lexik_jwt_authentication.on_jwt_invalid,
+                  method: onJWTInvalid,
+              }
+monolog:
+    channels: ["mailer"]
+    handlers:
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        mailer:
+            type: stream
+            path: "%kernel.logs_dir%/mailer_%kernel.environment%.log"
+            level: debug
+            channels: ["mailer"]

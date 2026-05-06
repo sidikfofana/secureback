@@ -1,0 +1,17 @@
+nelmio_cors:
+  defaults:
+    allow_origin: ['http://localhost:8080', 'https://localhost:8080', 'http://127.0.0.1:8080', 'https://127.0.0.1:8080', 'http://localhost:8081', 'https://localhost:8081', 'http://127.0.0.1:8081', 'https://127.0.0.1:8081']
+    #allow_origin: ["https://www.securecheck.info/"]
+    allow_credentials: true
+    allow_headers: ["Content-Type", "Authorization"]
+    expose_headers: []
+    allow_methods: ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
+    max_age: 3600
+  paths:
+    "^/api/": # Appliquer CORS aux routes commençant par /api/
+      allow_origin: ['http://localhost:8080', 'https://localhost:8080', 'http://127.0.0.1:8080', 'https://127.0.0.1:8080', 'http://localhost:8081', 'https://localhost:8081', 'http://127.0.0.1:8081', 'https://127.0.0.1:8081']
+      #allow_origin: ["https://www.securecheck.info/"]
+      allow_credentials: true
+      allow_headers: ["Content-Type", "Authorization"]
+      allow_methods: ["POST", "GET", "OPTIONS", "PUT", "DELETE"]
+      max_age: 3600
